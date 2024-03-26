@@ -22,7 +22,7 @@ toANF' unique = \case
 
   Add a b ->
     let (a', unique') = toANF' unique a
-        (b', unique'') = toANF' unique b
+        (b', unique'') = toANF' unique' b
     in
     (Add a' b', unique'')
 

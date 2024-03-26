@@ -28,8 +28,8 @@ toANF' unique = \case
 
   IfThenElse c t f ->
     let (c', unique') = toANF' unique c
-        (t', unique'') = toANF' unique t
-        (f', unique''') = toANF' unique f
+        (t', unique'') = toANF' unique' t
+        (f', unique''') = toANF' unique'' f
     in
     (IfThenElse c' t' f', unique''')
 
